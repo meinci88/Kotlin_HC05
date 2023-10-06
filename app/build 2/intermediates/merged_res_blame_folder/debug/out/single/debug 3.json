@@ -1,0 +1,130 @@
+[
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/layout_fragment_lichteffekte.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/layout/fragment_lichteffekte.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_baseline_home_24.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/baseline_home_24.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_baseline_settings_bluetooth_search_24.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/baseline_settings_bluetooth_search_24.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_ic_home_black_24dp.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/layout_fragment_home.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_baseline_bluetooth_searching_24.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/baseline_bluetooth_searching_24.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_baseline_add_alert_24.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/baseline_add_alert_24.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_baseline_light_mode_24.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/baseline_light_mode_24.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_baseline_settings_24.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/baseline_settings_24.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/layout_fragment_settings.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_baseline_arrow_drop_down_48.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/baseline_arrow_drop_down_48.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/xml_backup_rules.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/layout_activity_main.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/xml_data_extraction_rules.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.mehmet_inci.bottomnavigation_kotlin.app-merged_res-51:/navigation_mobile_navigation.xml.flat",
+        "source": "com.mehmet_inci.bottomnavigation_kotlin.app-main-53:/navigation/mobile_navigation.xml"
+    }
+]

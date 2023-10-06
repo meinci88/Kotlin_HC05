@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="SpinnerStyle">
+		<!-- Add any other attributes you want here -->
+		<item name="android:minWidth">200dp</item> <!-- Adjust the size as per your requirements -->
+		<item name="android:minHeight">100dp</item> <!-- Adjust the size as per your requirements -->
+	</style>
+</resources>
