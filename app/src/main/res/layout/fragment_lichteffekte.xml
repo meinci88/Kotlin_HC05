@@ -16,24 +16,20 @@
 			android:layout_height="106dp"
 			android:layout_margin="16dp"
 			android:layout_marginTop="84dp"
-
 			app:cursorColor="@color/black"
-			app:endIconDrawable="@drawable/baseline_check_box_24_green"
-
+			app:endIconDrawable="@drawable/baseline_save_48_green"
 			app:endIconMode="custom"
 			app:helperText="Anzahl LED"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toTopOf="parent"
-
-
 			app:prefixText="Stk."
 			app:prefixTextAppearance="@style/TextAppearance.AppCompat.Headline"
 			app:prefixTextColor="@color/black">
 
 			<com.google.android.material.textfield.TextInputEditText
 				android:id="@+id/textInputEditText"
-				android:layout_width="220dp"
+				android:layout_width="176dp"
 				android:layout_height="wrap_content"
 				android:background="@drawable/oval_corner_background"
 				android:inputType="number"

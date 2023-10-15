@@ -27,6 +27,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.mehmet_inci.bottomnavigation_kotlin.R
 import com.mehmet_inci.bottomnavigation_kotlin.SharedViewModel
+import com.mehmet_inci.bottomnavigation_kotlin.UserSettingsManager
 import com.mehmet_inci.bottomnavigation_kotlin.databinding.FragmentSettingsBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -35,9 +36,13 @@ import java.util.UUID
 
 
 class SettingsFragment : Fragment() {
+
+    private lateinit var getUserSettingsManager: UserSettingsManager
+
     private lateinit var sharedViewModel: SharedViewModel
     private lateinit var sensorManager: SensorManager
     private var accelerometer: Sensor? = null
+
 
     val BLUETOOTH_PERMISSION_REQUEST_CODE = 1 // You can choose any value for the request code.
 
@@ -59,6 +64,13 @@ class SettingsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
+       /* sharedViewModel.getnumLED().observe(
+            viewLifecycleOwner,
+            Observer {
+                    valInt4 ->
+                binding.textViewNumLEDs.setText(valInt4)
+            },
+        )*/
         println("SettingsFragment Hier ist onCreateView -------------------------")
 
         sensorManager = requireActivity().getSystemService(Context.SENSOR_SERVICE) as SensorManager
@@ -185,18 +197,19 @@ class SettingsFragment : Fragment() {
             },
         )
         //endregion
-        sharedViewModel.getnumLED().observe(
+        /*sharedViewModel.getnumLED().observe(
             viewLifecycleOwner,
             Observer {
                     valInt4 ->
                 binding.textViewNumLEDs.setText(valInt4)
             },
-        )
+        )*/
     }
 
     override fun onResume() {
         println("SettingsFragment Hier ist onResume -------------------------")
         super.onResume()
+
 
 
         // Register the accelerometer sensor listener
@@ -205,6 +218,7 @@ class SettingsFragment : Fragment() {
             // accelerometer?.let { sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_UI) }
         }
     }
+
 
 
     private fun devList() {
@@ -349,6 +363,18 @@ class SettingsFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+
+        getUserSettingsManager = UserSettingsManager(requireContext())
+        val userValue = getUserSettingsManager.getUserSetting("numLEDs", "8") as String
+        //binding.textViewNumLEDs.setText(userValue)
+        binding.textViewNumLEDs.editText?.setText(userValue)
+        sharedViewModel.getnumLED().observe(
+            viewLifecycleOwner,
+            Observer {
+                    valInt4 ->
+                binding.textViewNumLEDs.editText?.setText(valInt4)
+            },
+        )
         println("SettingsFragment Hier ist onStart -------------------------")
 
         // Register the BroadcastReceiver to listen for Bluetooth events

@@ -22,8 +22,9 @@ class SharedViewModel : ViewModel() {
 
     // number of used LEDs
     private val numLEDliveData = MutableLiveData<String>()
-    //fun setnumLED(valnumLED: String) { _textLiveData.value = valnumLED.toString()
-    //}
+
+    // fun setnumLED(valnumLED: String) { _textLiveData.value = valnumLED.toString()
+    // }
     fun getnumLED(): LiveData<String> { return numLEDliveData }
 
     fun setnumLED(valnumLED: String) { numLEDliveData.value = valnumLED

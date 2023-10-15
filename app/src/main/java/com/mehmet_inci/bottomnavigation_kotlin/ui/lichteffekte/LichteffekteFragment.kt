@@ -14,11 +14,14 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.mehmet_inci.bottomnavigation_kotlin.SharedViewModel
+import com.mehmet_inci.bottomnavigation_kotlin.UserSettingsManager
 import com.mehmet_inci.bottomnavigation_kotlin.databinding.FragmentLichteffekteBinding
 
 class LichteffekteFragment : Fragment(), SensorEventListener {
     private lateinit var LED: EditText
     private lateinit var sharedViewModel: SharedViewModel
+    private lateinit var saveUserSettingsManager: UserSettingsManager
+    private lateinit var getUserSettingsManager: UserSettingsManager
 
     private var _binding: FragmentLichteffekteBinding? = null
     private val binding get() = _binding!!
@@ -29,12 +32,20 @@ class LichteffekteFragment : Fragment(), SensorEventListener {
         savedInstanceState: Bundle?,
     ): View {
         sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
+        saveUserSettingsManager = UserSettingsManager(requireContext())
+        getUserSettingsManager = UserSettingsManager(requireContext())
         _binding = FragmentLichteffekteBinding.inflate(inflater, container, false)
 
         // Save num LEDs in LichteffekteFragment
         binding.textInputLayout.setEndIconOnClickListener {
             Toast.makeText(requireContext(), binding.textInputEditText.text.toString() + "LEDs gespeichert", Toast.LENGTH_SHORT).show()
+            // Save an integer setting
+
+            saveUserSettingsManager.saveUserSetting("numLEDs", binding.textInputEditText.text.toString())
         }
+
+        val userValue = getUserSettingsManager.getUserSetting("numLEDs", "8") as String
+        binding.textInputEditText.setText(userValue)
 
         val root: View = binding.root
 
