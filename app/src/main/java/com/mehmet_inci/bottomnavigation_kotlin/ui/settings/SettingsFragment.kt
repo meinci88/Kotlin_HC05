@@ -10,12 +10,15 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
+import android.hardware.Sensor
+import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
@@ -32,13 +35,17 @@ import java.util.UUID
 
 
 class SettingsFragment : Fragment() {
+    private lateinit var sharedViewModel: SharedViewModel
+    private lateinit var sensorManager: SensorManager
+    private var accelerometer: Sensor? = null
 
     val BLUETOOTH_PERMISSION_REQUEST_CODE = 1 // You can choose any value for the request code.
 
     private val bluetoothReceiver = BluetoothReceiver()
     val spinner_selectedItem = ArrayList<String>()
     private lateinit var binding: FragmentSettingsBinding
-    private lateinit var sharedViewModel: SharedViewModel
+
+    // private lateinit var sharedViewModel: SharedViewModel
     val mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
     var MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB")
     private lateinit var adapter: ArrayAdapter<String>
@@ -54,14 +61,63 @@ class SettingsFragment : Fragment() {
     ): View {
         println("SettingsFragment Hier ist onCreateView -------------------------")
 
+        sensorManager = requireActivity().getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
+        // Check if the device has an accelerometer
+        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+
+        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_settings, container, false)
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
+        binding.seekBar1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                binding.seekBar2.setProgress(0)
+                binding.seekBar3.setProgress(0)
+                val value1 = "A" + progress
+                sharedViewModel.setValue1(value1)
+                binding.textViewSeekbarVal1.text = value1
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+            }
+        })
+        binding.seekBar2.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                binding.seekBar1.setProgress(0)
+                binding.seekBar3.setProgress(0)
+                val value2 = "B" + progress
+                sharedViewModel.setValue2(value2)
+                binding.textViewSeekbarVal2.text = value2
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+            }
+        })
+        binding.seekBar3.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                binding.seekBar1.setProgress(0)
+                binding.seekBar2.setProgress(0)
+                val value3 = "C" + progress
+                sharedViewModel.setValue3(value3)
+                binding.textViewSeekbarVal3.text = value3
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+            }
+        })
+
+
         val root: View = binding.root
         return root
     }
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -91,7 +147,7 @@ class SettingsFragment : Fragment() {
         sharedViewModel.getValue1().observe(
             viewLifecycleOwner,
             Observer { valInt1 ->
-                binding.textViewLiveSeek1.text = valInt1.toString()
+                binding.textViewSeekbarVal1.text = valInt1.toString()
                 try {
                     val outputStream: OutputStream = btSocket!!.outputStream
                     outputStream.write(valInt1.toByteArray())
@@ -105,7 +161,7 @@ class SettingsFragment : Fragment() {
         sharedViewModel.getValue2().observe(
             viewLifecycleOwner,
             Observer { valInt2 ->
-                binding.textViewLiveSeek2.text = valInt2.toString()
+                binding.textViewSeekbarVal2.text = valInt2.toString()
                 try {
                     val outputStream: OutputStream = btSocket!!.outputStream
                     outputStream.write(valInt2.toByteArray())
@@ -119,7 +175,7 @@ class SettingsFragment : Fragment() {
         sharedViewModel.getValue3().observe(
             viewLifecycleOwner,
             Observer { valInt3 ->
-                binding.textViewLiveSeek3.text = valInt3.toString()
+                binding.textViewSeekbarVal3.text = valInt3.toString()
                 try {
                     val outputStream: OutputStream = btSocket!!.outputStream
                     outputStream.write(valInt3.toByteArray())
@@ -129,11 +185,25 @@ class SettingsFragment : Fragment() {
             },
         )
         //endregion
+        sharedViewModel.getnumLED().observe(
+            viewLifecycleOwner,
+            Observer {
+                    valInt4 ->
+                binding.textViewNumLEDs.setText(valInt4)
+            },
+        )
     }
 
     override fun onResume() {
         println("SettingsFragment Hier ist onResume -------------------------")
         super.onResume()
+
+
+        // Register the accelerometer sensor listener
+        if (accelerometer != null) {
+            // Register the listener
+            // accelerometer?.let { sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_UI) }
+        }
     }
 
 

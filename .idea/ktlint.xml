@@ -4,6 +4,7 @@
     <disabledRules>
       <list>
         <option value="no-consecutive-blank-lines" />
+        <option value="no-trailing-spaces" />
       </list>
     </disabledRules>
   </component>

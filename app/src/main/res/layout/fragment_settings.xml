@@ -3,82 +3,137 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools">
-<androidx.constraintlayout.widget.ConstraintLayout
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	tools:context=".ui.settings.SettingsFragment">
 
-	<Spinner
-		android:id="@+id/spinner"
-		style="@android:style/Widget.Spinner.DropDown"
-		android:layout_width="wrap_content"
-		android:layout_height="0dp"
-		android:background="?android:attr/actionModeSplitBackground"
-		android:dropDownWidth="wrap_content"
-		android:longClickable="true"
-		android:paddingStart="16dp"
-		android:paddingEnd="16dp"
-		android:pointerIcon="top_right_diagonal_double_arrow"
-		android:popupBackground="@color/white"
-		android:popupElevation="58dp"
-		android:scrollbarSize="50dp"
-		android:spinnerMode="dropdown"
-		android:textAlignment="center"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent"/>
-
-	<TextView
-		android:id="@+id/textView_selectedItem"
+	<androidx.constraintlayout.widget.ConstraintLayout
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="8dp"
-		android:layout_marginTop="32dp"
-		android:layout_marginEnd="8dp"
-		android:textAlignment="center"
-		android:textSize="20sp"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="1.0"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintVertical_bias="0.066" />
+		android:layout_height="match_parent"
+		tools:context=".ui.settings.SettingsFragment">
 
-	<TextView
-		android:id="@+id/textViewLiveSeek1"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="73dp"
-		android:layout_marginEnd="74dp"
-		android:layout_marginBottom="469dp"
-		android:textSize="34sp"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent" />
+		<Spinner
+			android:id="@+id/spinner"
+			style="@android:style/Widget.Spinner.DropDown"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp"
+			android:layout_marginTop="96dp"
+			android:background="?android:attr/actionModeSplitBackground"
+			android:dropDownWidth="wrap_content"
+			android:longClickable="true"
+			android:paddingStart="16dp"
+			android:paddingEnd="16dp"
+			android:pointerIcon="top_right_diagonal_double_arrow"
+			android:popupBackground="@color/white"
+			android:popupElevation="58dp"
+			android:scrollbarSize="50dp"
+			android:spinnerMode="dropdown"
+			android:textAlignment="center"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.498"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
 
-	<TextView
-		android:id="@+id/textViewLiveSeek2"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="73dp"
-		android:layout_marginEnd="74dp"
-		android:layout_marginBottom="409dp"
-		android:textSize="34sp"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent" />
+		<TextView
+			android:id="@+id/textView_selectedItem"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:layout_marginEnd="24dp"
+			android:textAlignment="center"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
 
-	<TextView
-		android:id="@+id/textViewLiveSeek3"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="73dp"
-		android:layout_marginEnd="74dp"
-		android:layout_marginBottom="349dp"
-		android:textSize="34sp"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent" />
+		<SeekBar
+			android:id="@+id/seekBar1"
+			style="@android:style/Widget.SeekBar"
+			android:layout_width="300dp"
+			android:layout_height="50dp"
+			android:layout_marginEnd="-60dp"
+			android:layout_marginBottom="232dp"
+			android:max="45"
+			android:rotation="270"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+		<TextView
+			android:id="@+id/textViewSeekbarVal1"
+			android:layout_width="75dp"
+			android:layout_height="50dp"
+			android:layout_marginEnd="55dp"
+			android:layout_marginBottom="120dp"
+			android:hint="0"
+			android:textAlignment="center"
+			android:textSize="26dp"
+			android:textStyle="bold"
+			app:layout_constraintBottom_toTopOf="@+id/seekBar2"
+			app:layout_constraintEnd_toEndOf="parent" />
+
+		<SeekBar
+			android:id="@+id/seekBar2"
+			style="@android:style/Widget.SeekBar"
+			android:layout_width="300dp"
+			android:layout_height="50dp"
+			android:layout_marginBottom="234dp"
+			android:max="45"
+			android:rotation="270"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent" />
+
+		<TextView
+			android:id="@+id/textViewSeekbarVal2"
+			android:layout_width="75dp"
+			android:layout_height="50dp"
+			android:layout_marginStart="37dp"
+			android:layout_marginEnd="39dp"
+			android:layout_marginBottom="120dp"
+			android:hint="0"
+			android:textAlignment="center"
+			android:textSize="26dp"
+			android:textStyle="bold"
+			app:layout_constraintBottom_toTopOf="@+id/seekBar2"
+			app:layout_constraintEnd_toStartOf="@+id/textViewSeekbarVal1"
+			app:layout_constraintStart_toEndOf="@+id/textViewSeekbarVal3" />
+
+		<SeekBar
+			android:id="@+id/seekBar3"
+			style="@android:style/Widget.SeekBar"
+			android:layout_width="300dp"
+			android:layout_height="50dp"
+			android:layout_marginStart="-60dp"
+			android:layout_marginBottom="232dp"
+			android:max="45"
+			android:rotation="270"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="parent" />
+
+		<TextView
+			android:id="@+id/textViewSeekbarVal3"
+			android:layout_width="75dp"
+			android:layout_height="50dp"
+			android:layout_marginStart="56dp"
+			android:layout_marginBottom="120dp"
+			android:hint="0"
+			android:textAlignment="center"
+			android:textSize="26dp"
+			android:textStyle="bold"
+			app:layout_constraintBottom_toTopOf="@+id/seekBar2"
+			app:layout_constraintStart_toStartOf="parent" />
+
+		<TextView
+			android:id="@+id/textViewNumLEDs"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="16dp"
+			android:layout_marginTop="8dp"
+			android:text="numLEDs"
+			android:textAlignment="center"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
