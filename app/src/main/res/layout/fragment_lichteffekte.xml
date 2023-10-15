@@ -7,24 +7,30 @@
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
+		android:background="#4DD0E1"
+		android:backgroundTint="#4DD0E1"
 		tools:context=".ui.lichteffekte.LichteffekteFragment">
 
 		<com.google.android.material.textfield.TextInputLayout
 			android:id="@+id/textInputLayout"
 			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-			android:layout_width="220dp"
-			android:layout_height="106dp"
+			android:layout_width="221dp"
+			android:layout_height="108dp"
 			android:layout_margin="16dp"
 			android:layout_marginTop="84dp"
+			android:background="#4DD0E1"
+			android:textColorHint="#FFFFFF"
 			app:cursorColor="@color/black"
 			app:endIconDrawable="@drawable/baseline_save_48_green"
 			app:endIconMode="custom"
 			app:helperText="Anzahl LED"
+			app:helperTextTextAppearance="@style/TextAppearance.AppCompat.Body2"
+			app:helperTextTextColor="#F7F5F8"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toTopOf="parent"
 			app:prefixText="Stk."
-			app:prefixTextAppearance="@style/TextAppearance.AppCompat.Headline"
+			app:prefixTextAppearance="@style/TextAppearance.AppCompat.Large"
 			app:prefixTextColor="@color/black">
 
 			<com.google.android.material.textfield.TextInputEditText
@@ -32,9 +38,13 @@
 				android:layout_width="176dp"
 				android:layout_height="wrap_content"
 				android:background="@drawable/oval_corner_background"
+				android:backgroundTint="#1976D2"
 				android:inputType="number"
+				android:textAlignment="textStart"
 				android:textColor="@color/black"
-				android:textSize="24dp" />
+				android:textSize="24dp"
+				android:textStyle="bold"
+				app:endIconDrawable="@drawable/baseline_save_48_green" />
 		</com.google.android.material.textfield.TextInputLayout>
 	</androidx.constraintlayout.widget.ConstraintLayout>
 	</layout>

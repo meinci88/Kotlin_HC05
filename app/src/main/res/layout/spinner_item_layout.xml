@@ -8,4 +8,4 @@
 	android:padding="12dp"
 	android:textColor="#FF0000"
 	android:textStyle="bold"
-	android:background="@color/cardview_light_background" />
+	 />
